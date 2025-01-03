@@ -29,7 +29,7 @@ function App() {
   return (
     <div className="App">
        {screenWidth < 768 && <NavComp />}
-       <Row>
+       <Row className="g-0"> 
        <Col sm={2}>
          {screenWidth >= 768 && <Sidebar/>}
        </Col>

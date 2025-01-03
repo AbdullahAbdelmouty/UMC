@@ -24,7 +24,7 @@ function OffcanvasExample() {
                   Offcanvas
                 </Offcanvas.Title>
               </Offcanvas.Header>
-              <Offcanvas.Body>
+              <Offcanvas.Body className='p-0' >
                 <Sidebar/>
               </Offcanvas.Body>
             </Navbar.Offcanvas>

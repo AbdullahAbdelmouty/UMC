@@ -1,35 +1,63 @@
 import React from "react";
-import {Row,Col,Image, Container, Button} from 'react-bootstrap';
-import { GridFill,People,Boxes,BoxArrowLeft } from 'react-bootstrap-icons';
+import {Row,Col,Image, Container, Button, Card} from 'react-bootstrap';
+import { Trash3,EyeFill,BoxArrowLeft,PencilSquare } from 'react-bootstrap-icons';
 import logo from '../logo.svg';
 export default function Sidebar() {
     return (
-        <Container className="p-2" style={{backgroundColor: '#f8f9fa', height: '100vh'}}>
-        <Row className="flex-column align-items-center justify-content-center"> 
-            <Col>
-            <Image src={logo} rounded />
-            </Col>
-            <Col>
-              <h2 className="fs-6 text-center">Abdullah Abdelmouty</h2>
-                <p className="fs-6 text-center">Software Engineer</p>
-            </Col>
-        </Row>
-        <div className="list-group">
-            <Row className="g-2 flex-column">
-                <Col>
-                    <Button variant="primary" className="list-group-item list-group-item-action rounded"><span><GridFill/></span> Overview</Button>
+        <Container className="p-4">
+            <Row className="g-2 flex-column bg-white rounded p-3">
+                <Col className="p-2 rounded" style={{backgroundColor: "#e3edf9"}}>
+                 <Row className="align-items-center">
+                    <Col xs={3} md={2} >
+                        <Image src={logo} width={90} roundedCircle />
+                    </Col>
+                    <Col xs={3} md={2}>
+                        <p className="mb-0">John Doe</p>
+                        <p className="mb-0 d-block d-lg-none">Position</p>
+                    </Col>
+                    <Col xs={3} md={2} className="d-none d-lg-block">
+                        <p className="mb-0">Position</p>
+                    </Col>
+                    <Col xs={3} md={2} className="d-none d-md-block">
+                        <p className="mb-0">Sales</p>
+                    </Col>
+                    <Col xs={3} md={2} className="d-none d-md-block">
+                        <p className="mb-0">1/1/2010</p>
+                    </Col>
+                    <Col xs={6} md={2} className="d-flex justify-content-center align-items-center gap-2" >
+                        <Button variant="primary" style={{backgroundColor:"#121c3e"}} className="rounded border-0"><EyeFill/></Button>
+                        <Button variant="primary" style={{backgroundColor:"#121c3e"}} className="rounded border-0"><PencilSquare/></Button>
+                        <Button variant="primary" style={{backgroundColor:"#121c3e"}} className="rounded border-0"><Trash3/></Button>
+                    </Col>
+                 </Row>
                 </Col>
-                <Col>
-                    <Button variant="primary" className="list-group-item list-group-item-action rounded"><span><People/></span> Employees</Button>
-                </Col>
-                <Col>
-                    <Button variant="primary" className="list-group-item list-group-item-action rounded"><span><Boxes/></span> Departments</Button>
-                </Col>
-                <Col>
-                    <Button variant="primary" className="list-group-item list-group-item-action rounded"><span><BoxArrowLeft/></span> Logout</Button>
+                <Col className="p-2 rounded" style={{backgroundColor: "#e3edf9"}}>
+                 <Row className="align-items-center">
+                    <Col xs={3} md={2} >
+                        <Image src={logo} width={90} roundedCircle />
+                    </Col>
+                    <Col xs={3} md={2}>
+                        <p className="mb-0">John Doe</p>
+                        <p className="mb-0 d-block d-lg-none">Position</p>
+                    </Col>
+                    <Col xs={3} md={2} className="d-none d-lg-block">
+                        <p className="mb-0">Position</p>
+                    </Col>
+                    <Col xs={3} md={2} className="d-none d-md-block">
+                        <p className="mb-0">Sales</p>
+                    </Col>
+                    <Col xs={3} md={2} className="d-none d-md-block">
+                        <p className="mb-0">1/1/2010</p>
+                    </Col>
+                    <Col xs={6} md={2} className="d-flex justify-content-center align-items-center gap-2" >
+                        <Button variant="primary" style={{backgroundColor:"#121c3e"}} className="rounded border-0"><BoxArrowLeft/></Button>
+                        <Button variant="primary" style={{backgroundColor:"#121c3e"}} className="rounded border-0"><BoxArrowLeft/></Button>
+                        <Button variant="primary" style={{backgroundColor:"#121c3e"}} className="rounded border-0"><BoxArrowLeft/></Button>
+                    </Col>
+                 </Row>
                 </Col>
             </Row>
-        </div>
+            
         </Container>
     );
     }
