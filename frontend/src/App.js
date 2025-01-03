@@ -1,10 +1,15 @@
 import './App.css';
 import NavComp from './Components/NavComp';
+import { Routes, Route } from "react-router-dom";
+import Employees from './Pages/Employees';
+import Departments from './Pages/Departments';
 import React, { useState, useEffect } from "react";
 import {Navbar,Container,Row,Col} from 'react-bootstrap';
 import Overview from './Pages/Overview';
 import Sidebar from './Components/Sidebar';
 import * as Icon from 'react-bootstrap-icons';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 function App() {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     // Function to update screen width on resize
@@ -28,7 +33,13 @@ function App() {
        <Col sm={2}>
          {screenWidth >= 768 && <Sidebar/>}
        </Col>
-        <Col sm={10}>sm=8</Col>
+        <Col sm={10}>
+        <Routes>
+          <Route path="/" element={<Overview />} />
+          <Route path="/employees" element={<Employees />} />
+          <Route path="/departments" element={<Departments />} />
+        </Routes>
+        </Col>
       </Row>
     </div>
   );
